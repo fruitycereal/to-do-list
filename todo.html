@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel ='stylesheet' href = todo.css >
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title> To Do List </title>
+</head>
+
+<body>
+    <div id = 'todo'> TO DO LIST </div>
+
+    <button id = 'theme' onclick = "changeTheme()"> 
+        <img src = 'sun.svg'></img>
+    </button>
+
+    <div id = 'realcontain'>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a task" autocomplete = 'off' autocorrect = 'off'>
+            <button onclick= "addTask()"> ADD </button>
+        </div>
+    </div>
+
+    <p id ='p'> click the task to edit </p>
+    <div id="taskContainer"></div>
+
+    <button onclick = 'clearAll()'> CLEAR ALL </button>
+</body>
+
+<script src = realtask.js> </script>
+</html>

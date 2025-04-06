@@ -1,0 +1,247 @@
+* {
+    margin: 10px;
+    padding: 0;
+}
+
+:root {
+    --titlecolor:#f6baba;
+    --btncolor: #f08686;
+    --textcolor: #4a2424;
+    --checked: #715656;
+    --checked2: rgb(161, 115, 115);
+    --light: #fedcdc;
+    --lightmode: rgb(248, 240, 234);
+    --sun: rgb(255, 204, 0);
+    --moon: rgb(10, 0, 67);
+    --darkmode: rgb(17, 11, 11);
+}
+
+/* theme */
+
+#theme {
+    background-color: transparent;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    position: relative;
+    bottom: 18%;
+    left: 46%;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+#theme img {
+    height: 27px;
+    width: 27px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* title */
+
+#todo {
+    color: var(--titlecolor);
+    font-size: 50px;
+    margin-top: 50px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    color: var(--lightmode);
+    font-size: 18px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 25px;
+    transition: opacity 0.6 ease;
+}
+
+body {
+    background-color: var(--darkmode);
+    font-family: 'Poppins', sans-serif;
+    color: var(--textcolor);
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+
+/* input */
+
+#realcontain {
+    background-color: #ffa4a4;
+    align-items: center;
+    height: 60px;
+    width: 500px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+input {
+    width: 330px;
+    padding: 8px;
+    border-radius: 8px;
+    border-color: transparent;
+    background-color: #fedcdc;
+    outline-color: var(--btncolor);
+}
+
+button {
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: var(--btncolor);
+    width: 100px;
+    color: white;
+    border-radius: 8px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ca6161;
+}
+
+
+/* real tasks */
+
+#taskContainer {
+    margin: 0px;
+    padding: 0px;
+}
+
+#test {
+    background-color: #f6baba;
+    height: auto;
+    width: 500px;
+    border-radius: 18px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+textArea {
+    border: 0;
+    color: var(--textcolor);
+    outline: none;
+    word-wrap: break-word; /* Wraps long words */
+    overflow-wrap: break-word; /* Ensures breaking */
+    width: 400px; 
+    height: auto;
+    margin: 20px;
+    background-color: var(--light);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+input[type="checkbox"] {
+    appearance: none; /* Removes default checkbox appearance */
+    width: 22px;
+    height: 22px;
+    border-radius: 50%; /* Optional: makes it circular */
+    border: 1.8px solid var(--checked);
+    background-color: rgb(214, 163, 163);
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+/* Style for the checkbox when checked */
+input[type="checkbox"]:checked {
+    background-color: var(--checked);
+    position: relative; /* Needed for positioning the checkmark */
+}
+
+/* Adding the checkmark inside the checkbox */
+input[type="checkbox"]:checked::before {
+    content: "✔";
+    position: absolute; /* Position it inside the checkbox */
+    top: 2px;
+    left: 4px;
+    font-size: 14px;
+    color: white;
+}
+
+img {
+    height: 19px;
+    width: 17px;
+    padding: 0;
+}
+
+img:hover {
+    height: 21px;
+    width: 18px;
+    padding: 0;
+}
+
+ #remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; 
+    height: 47px; 
+    border-radius: 50%; 
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.task {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.task-added {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.task {
+    transition: opacity 0.3s ease;
+}
+
+.task.removing {
+    opacity: 0;
+}
+
+
+.task-text {
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    max-width: 340px; 
+}
+
+
+.task-edit-input {
+    width: 100%;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+}
+
+.edit-input {
+    width: 90%;
+    padding: 4px;
+    font-size: 16px;
+    border: 1px solid var(--textcolor);
+    border-radius: 4px;
+    outline: none;
+}
